@@ -1,0 +1,362 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    height: 100vh;
+}
+input{
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(245, 239, 239);
+    background-color: rgb(31, 17, 17);
+    font-size: 1.3rem;
+}
+.main-container{
+    background-color: rgb(31, 17, 17);
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    width: 18%;
+    border-radius: 10px;
+}
+.numbers{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(91, 86, 80);
+        color: white;
+        font-size: 1.3rem;
+        border: none;
+        align-items: center;
+        margin-top: 10px;
+}
+.operation{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(241, 133, 8);
+    color: white;
+    font-size: 1.3rem;
+    align-items: center;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.us{
+    position: absolute;
+    bottom: 346px;
+}
+.zero{
+    width: 105px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgb(91, 86, 80);
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    justify-content: start;
+    position: relative;
+}
+.me{
+    position: relative;
+    left: 4px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.clear{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(236, 231, 225);
+    color: black;
+    font-size: 1.3rem;
+    align-items: center;
+}
+.both{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(236, 231, 225);
+    color: black;
+    font-size: 1.3rem;
+    align-items: center;
+}
+.modulus{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(236, 231, 225);
+    color: black;
+    font-size: 1.3rem;
+    align-items: center;
+}
+/* @media(min-width:319px) and (max-width: 480px) {
+    body{
+        font-family: 'Courier New', Courier, monospace;
+        box-sizing: border-box;
+        margin:0;
+        padding: 0;
+        display: flex;
+        justify-content: center; 
+        align-items: center;    
+        height: 100vh;
+    }
+    input{
+        width: 70%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        color: rgb(252, 254, 254);
+        background-color: rgb(31, 17, 17);
+        font-size: 1.3rem;
+        position: relative;
+        left: 30px;
+    }
+    .main-container{
+        background-color: rgb(31, 17, 17);
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        border-radius: 10px;
+        height: 360px;
+        position: relative;
+        flex-direction: column;
+    }
+    .numbers{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgb(91, 86, 80);
+            color: white;
+            font-size: 1.3rem;
+            border: none;
+            align-items: center;
+            margin-top: 10px;
+            position: relative;
+            right: 31px;
+    }
+    .operation{
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background-color: rgb(241, 133, 8);
+        color: white;
+        font-size: 1.3rem;
+        align-items: center;
+        position: absolute;
+        margin-left: 10px;
+        margin-top: 10px;
+        right: 3px;
+    }
+    .us{
+        position: absolute;
+        bottom: 245px;
+    }
+    .zero{
+        width: 105px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: rgb(91, 86, 80);
+        color: white;
+        font-size: 1.3rem;
+        border: none;
+        justify-content: start;
+        position: relative;
+        right: 62px;
+        top: 10px;
+    }
+    .me{
+        position: absolute;
+        left: 120px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        bottom: 2px;
+    }
+    .clear, .both, .modulus{
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background-color: rgb(236, 231, 225);
+        color: black;
+        font-size: 1.3rem;
+        align-items: center;
+        position: relative;
+        right: 31px;
+    }
+}
+@media (min-width:481px) and (max-width: 1200px) {
+    body{
+        font-family: 'Courier New', Courier, monospace;
+        box-sizing: border-box;
+        margin:0;
+        padding: 0;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh;
+    }
+    input{
+        width: 70%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        color: rgb(252, 254, 254);
+        background-color: rgb(31, 17, 17);
+        font-size: 1.3rem;
+        position: relative;
+        left: 30px;
+    }
+    .main-container{
+        background-color: rgb(31, 17, 17);
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 47%;
+        border-radius: 10px;
+        height: 360px;
+        position: relative;
+        flex-direction: column;
+    }
+    .numbers{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgb(91, 86, 80);
+            color: white;
+            font-size: 1.3rem;
+            border: none;
+            align-items: center;
+            margin-top: 10px;
+            position: relative;
+            right: 31px;
+    }
+    .operation{
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background-color: rgb(241, 133, 8);
+        color: white;
+        font-size: 1.3rem;
+        align-items: center;
+        position: absolute;
+        margin-left: 10px;
+        margin-top: 10px;
+        right: 3px;
+    }
+    .us{
+        position: absolute;
+        bottom: 245px;
+    }
+    .zero{
+        width: 105px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: rgb(91, 86, 80);
+        color: white;
+        font-size: 1.3rem;
+        border: none;
+        justify-content: start;
+        position: relative;
+        right: 62px;
+        top: 10px;
+    }
+    .me{
+        position: absolute;
+        left: 120px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        bottom: 2px;
+    }
+    .clear, .both, .modulus{
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background-color: rgb(236, 231, 225);
+        color: black;
+        font-size: 1.3rem;
+        align-items: center;
+        position: relative;
+        right: 31px;
+    }
+} */
+
+@media screen and (max-width: 768px) {
+    /* Styles for tablets */
+    .main-container {
+        width:35%; /* Adjust width for tablets */
+        padding: 10px 15px;
+    }
+    input {
+        width: 45%; /* Adjust input width for smaller screens */
+        font-size: 1.1rem; /* Slightly smaller font */
+    }
+    .numbers,
+    .operation,
+    .clear,
+    .both,
+    .modulus {
+        width: 40px; /* Adjust button sizes */
+        height: 40px;
+        font-size: 1rem;
+    }
+    .zero {
+        width: 90px; /* Adjust the zero button */
+        height: 40px;
+    }
+    .us {
+        bottom: 330px; /* Position the US button */
+    }
+    .me{
+        position: relative;
+        left: 0.5px;
+        bottom: 2px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Styles for small phones */
+    .main-container {
+        width: 90%; /* Full width for small phones */
+        padding: 15px;
+    }
+    input {
+        width: 100%; /* Maximize input width */
+        font-size: 1rem;
+    }
+    .numbers,
+    .operation,
+    .clear,
+    .both,
+    .modulus {
+        width: 35px; /* Smaller buttons */
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    .zero {
+        width: 80px; /* Narrow zero button */
+        height: 20px;
+    }
+
+}

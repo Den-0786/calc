@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".operation").click(function(){
+                $(".operation").css({
+                    "background-color": "",
+                    "color": ""
+                });
+                    $(this).animate({
+                        backgroundColor: "white",
+                        color: "#000000"
+                    }, 200)
+
+                
+                $(".clear").click(function(){
+                    $(".operation").css({
+                        "background-color": "",
+                        "color": ""
+                    });
+                });
+            });
+        });
+        $(document).ready(function(){
+            // Changing the clear text (AC) to (C) when any of the button accept the clear button is clicked
+            $(".operation, .us, .me, .zero, .numbers, .both, .modulus").click(function(){
+                    $(".clear").text("C")
+                });
+            //Changing the clear text to its original text
+            $(".clear").click(function(){
+                $(".clear").text("AC")
+            });
+        });
+    </script>
+</head>
+<body>
+    <section class="main-container">
+        <div class="display">
+            <input type="text" id="display-value" readonly>
+        </div>
+        <div class="special-operators">
+            <button class="clear">AC</button>
+            <button class="both">+/-</button>
+            <button class="modulus">%</button>
+            <button class="operation us">/</button>
+        </div>
+        <div>
+            <button class="numbers">7</button>
+            <button class="numbers">8</button>
+            <button class="numbers">9</button>
+            <button class="operation">x</button>
+        </div>
+        <div>
+            <button class="numbers">4</button>
+            <button class="numbers">5</button>
+            <button class="numbers">6</button>
+            <button class="operation">-</button>
+        </div>
+        <div>
+            <button class="numbers">1</button>
+            <button class="numbers">2</button>
+            <button class="numbers">3</button>
+            <button class="operation">+</button>
+        </div>
+        <div>
+            <button class="zero">0</button>
+            <button class="numbers me">.</button>
+            <button class="operation">=</button>
+        </div>
+
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
